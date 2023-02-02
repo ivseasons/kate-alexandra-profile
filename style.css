@@ -1,0 +1,265 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+main {
+    display: grid;
+    place-content: center;
+}
+
+h1, h2, h3, a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;   
+    margin: 0;
+}
+
+/* NAV SECTION */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;;
+    align-items: center;
+}
+
+.nav h1 {
+    font-size: 1.3em;
+}
+
+.open-btn, .close-btn {
+    cursor: pointer;
+}
+
+.close-btn {
+    display: none;
+}
+
+.show {
+    display: unset;
+}
+
+.hide {
+    display: none;
+}
+
+nav {
+    position: absolute;
+    height: 100vh;
+    background: #2A4858;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all .3s;
+    z-index: 100;
+}
+
+.open-nav {
+    visibility: unset;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+nav ul li {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 1.25em;
+}
+
+nav ul {
+    padding-top: 3em;
+}
+
+nav ul li a {
+    color: white;
+    padding: .5em 2em;
+}
+
+nav ul li a:hover {
+    color: #23AA84;
+    text-decoration: underline;
+}
+
+a.contact-btn {
+    border: 1px solid white;
+}
+
+a.contact-btn:hover {
+    background: #23AA84;
+    color: white;
+    text-decoration: none;
+}
+
+.green-circle-nav {
+    position: absolute;
+    border: 3px solid #23AA84;
+    border-radius: 50%;
+    width: 21em;
+    height: 21em;
+    top: 53%;
+    right: -100px;
+}
+
+/* HERO SECTION */
+
+.blue-circle {
+    position: absolute;
+    background: #2A4858;
+    width: 17em;
+    height: 17em;
+    border-radius: 50%;
+    z-index: -1;
+    left: -10px;
+}
+
+.hero-section {
+    position: relative;
+    color: white;
+    padding: 2em;
+}
+
+.headshot-circle {
+    position: absolute;
+    right: -10px;
+    top: 150px;
+    background-image: url('./images/landscape-headshot2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 17em;
+    height: 17em;
+    border-radius: 50%;
+}
+
+.title {
+    margin-left: 1em;
+    margin-top: 3.5em;
+    width: 50%;
+}
+
+.hero-section h1 {
+    font-size: 1.5rem;
+}
+
+.hero-section h2 {
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+.hero-section p {
+    font-size: .7rem;
+}
+
+/* INFO SECTION */
+
+.info-section {
+    position: relative;
+    margin: 15em 3em 5em 3em;
+    text-align: center;
+}
+
+.info-section ul {
+    padding-bottom: 4em;
+    display: grid;
+    place-content: center;
+}
+
+.info-section p {
+    font-size: .9rem;
+    line-height: 1.5em;
+    color: #595959;
+    padding-bottom: 1em;
+}
+
+a.cta-btn {
+    display: block;
+    margin: auto;
+    background: linear-gradient(180deg, #23AA84, #86D780);
+    color: white;
+    font-weight: bold;
+    padding: .5em 1em;
+    border-radius: 2em;
+    width: 120px;
+}
+
+a.cta-btn:hover {
+    background: #007882;
+}
+
+.green-circle {
+    position: absolute;
+    opacity: .2;
+    border: 3px solid #23AA84;
+    border-radius: 50%;
+    width: 19em;
+    height: 19em;
+    top: 80%;
+    right: -100px;
+    z-index: -1;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+    display: grid;
+    background-image: url('./images/cta-img.png');
+    background-size: cover;
+    width: 90%;
+    height: 10em;
+    margin: auto;
+
+}
+
+.contact-section a {
+    border: 2px solid #23AA84;
+    padding: 1em 1.5em;
+    background-color: white;
+    font-weight: bold;
+    place-self: center;
+}
+
+.contact-section a:hover {
+    background-color: #23AA84;
+    color: white;
+}
+
+/* FOOTER SECTION */
+
+hr {
+    margin: 4em 2em 2em 2em;
+}
+
+.social-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    padding: 0 .5em;
+}
+
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+
+dark blue: #2A4858
+dark green: #007882
+green: #23AA84
+light green: #86D780
+gray: #595959
+
+*/
