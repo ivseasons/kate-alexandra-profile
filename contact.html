@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/headshot-square.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="sub.css">
+
+        <title>Kate Alexandra | Contact Me</title>
+    </head>
+
+    <body>
+
+        <header class="flex">
+            <div class="nav">
+                <h1>Kate Alexandra</h1>
+                <div class="menu-btn">
+                    <img src="./images/icon-hamburger.svg" class="open-btn" id="open-btn" alt="Hamburger Menu Icon">
+                    <img src="./images/icon-close.svg" class="close-btn" id="close-btn" alt="Close Menu Icon">
+                </div>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="bio.html">bio</a></li>
+                    <li><a href="resources.html">resources</a></li>
+                    <li><a href="media.html">media</a></li>
+                    <li><a href="contact.html" class="contact-btn-active">contact me</a></li>
+                </ul>
+                <div class="green-circle-nav"></div>
+            </nav>
+        </header>
+
+        <main>
+
+            <div class="sub-page">
+
+                <div class="sub-title">
+                    <h1>Contact me</h1>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-textbox">
+                        <h2>LESSONS & COACHING</h2>
+                        <p>A central tenant to my teaching philosophy is removing barriers for students to access quality music education. To arrange a lesson or coaching, please fill out the Studio Inquiry Form. Rates are reduced for the pandemic with a majority of lessons happening virtually.</p>
+                   
+                        <form>
+                            <div class="form-flex">
+                                <div class="name">   
+                                    <label for="fname">First Name*</label>
+                                    <input type="text" id="fname" name="fname" required>
+                                    <p class="error" id="error-msg"></p>
+                                </div>
+                                <div class="name">
+                                    <label for="lname">Last Name*</label>
+                                    <input type="text" id="lname" name="lname" required>
+                                    <p class="error" id="error-msg"></p>
+                                </div>
+                               
+                            </div>
+                           
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email">
+                            <p class="error" id="error-msg"></p>
+    
+                            <label for="interest" placeholder="Select">What are you interested in?</label>
+                            <select id="interest">
+                                <option value="select">Select</option>
+                                <option value="lesson">Lesson</option>
+                                <option value="coaching">Coaching</option>
+                                <option value="info">More info</option>
+                                <option value="other">Other</option>
+                            </select>
+    
+                            <label for="message">Message</label>
+                            <textarea></textarea>
+    
+                            <a href="#" class="cta-btn" id="submit">SUBMIT</a>
+                        </form>
+                    </div>
+
+                    
+
+                    <img src="./images/portrait1.png" class="contact-portrait" alt="Kate Alexandra Portrait Image">
+                    
+                    <img src="./images/green-circle.png" class="bg-green contact-green" alt="Green Circle Background">
+                </div>
+            </div>
+
+
+        </main>
+        
+        <footer>
+            <hr>
+    
+            <div class="social-flex">
+                <a href="#" target="_blank">
+                    <img src="./images/icon-facebook.svg" class="social-icon" alt="Facebook Icon">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="./images/icon-instagram.svg" class="social-icon" alt="Instagram Icon">
+                </a>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="index.js"></script>
+ 
+    </body>
+</html>

@@ -84,18 +84,23 @@ nav ul {
     padding-top: 3em;
 }
 
+nav ul li a.active {
+    color: #23AA84;
+    text-decoration: underline;
+}
+
 nav ul li a {
     color: white;
     padding: .5em 2em;
 }
 
 nav ul li a:hover {
-    color: #23AA84;
     text-decoration: underline;
 }
 
 a.contact-btn {
     border: 1px solid white;
+    transition: all 0.3s ease-out;
 }
 
 a.contact-btn:hover {
@@ -103,6 +108,19 @@ a.contact-btn:hover {
     color: white;
     text-decoration: none;
 }
+
+a.contact-btn-active {
+    color: white;
+    text-decoration: none;
+    background-color: #23AA84;
+    border: 1px solid white;
+}
+
+a.contact-btn-active:hover {
+    background-color: #2A4858;
+    transition: all 0.3s ease-out;
+}
+
 
 .green-circle-nav {
     position: absolute;
@@ -234,6 +252,7 @@ a.cta-btn:hover {
     background-color: white;
     font-weight: bold;
     place-self: center;
+    transition: all 0.3s ease-out;
 }
 
 .contact-section a:hover {
@@ -255,6 +274,10 @@ hr {
 
 .social-icon {
     padding: 0 .5em;
+}
+
+.social-icon:hover {
+    filter: invert(26%) sepia(20%) saturate(806%) hue-rotate(157deg) brightness(96%) contrast(101%);
 }
 
 @media (min-width: 720px) {
@@ -293,6 +316,10 @@ hr {
         color: black;
         padding: .5em .75em;
         font-size: .8rem;
+    }
+
+    nav ul li a:hover {
+        color: #2A4858;
     }
 
     a.contact-btn {
@@ -346,18 +373,31 @@ hr {
 
 @media (min-width: 950px) {
 
+    html {
+        font-size: 20px;
+    }
+
+    header {
+        padding: 2em;
+        align-items: center;
+    }
+
+    .nav h1 {
+        font-size: 1.5rem;
+    }
+
     nav ul li a {
         padding: .5em 1em;
         margin-left: .5em;
     }
 
     .hero-section {
-        width: 800px;
+        width: 950px;
     }
 
     .title {
-        width: 30em;
-        height: 30em;
+        width: 35em;
+        height: 35em;
        
     }
 
@@ -377,12 +417,12 @@ hr {
 
 
     .headshot-circle {
-        width: 30em;
-        height: 30em;
+        width: 35em;
+        height: 35em;
     }
 
     .wrapper {
-        margin: 1em;
+        margin: 3em;
     }
 
     .info-section {
@@ -391,7 +431,7 @@ hr {
         grid-template-columns: auto auto auto;
         column-gap: 5em;
         margin: 5em auto;
-        width: 80% 
+        width: 75% 
     }
 
     .info-section ul li{
@@ -406,7 +446,6 @@ hr {
 
     .info-section ul li p {
         line-height: 1.8em;
-
     }
 
     a.cta-btn {
@@ -420,8 +459,8 @@ hr {
     }
 
     .contact-section {
-        height: 13em;
-        width: 70%;
+        height: 15em;
+        width: 65%;
     }
 
 }

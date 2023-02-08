@@ -1,0 +1,499 @@
+main {
+    display: grid;
+    place-content: center;
+    
+}
+
+.sub-page {
+    margin: 2em;
+    font-size: 14px;
+    width: 90vw;
+}
+
+.sub-title {
+    position: relative;
+    display: block;
+    padding: 0;
+}
+
+.sub-title h1 {
+    color: black;
+}
+
+.sub-title h1:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: -20%;
+    height: 10px;
+    width: 60%;
+    background: #23AA84;
+    z-index: -1;
+}
+
+.bio-grid {
+    display: grid;
+    place-content: center;
+    padding: 0 3em;
+}
+
+
+.bio-grid p {
+    font-size: .9rem;
+    line-height: 1.5em;
+}
+
+img.bio-portrait {
+    height: 30em;
+    margin: 2em auto;
+}
+
+img.bio-portrait2 {
+    width: 25em;
+}
+
+.contact-section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* RESOURCES PAGE */
+
+.res-grid {
+    display: grid;
+    place-content: center;
+}
+
+.res-title h2, .res-textbox1 h3 {
+    text-align: center;
+}
+
+.res-title {
+    margin-top: 3em;
+    font-size: 1.5rem;
+}
+
+.res-textbox1 {
+    line-height: 1.5em;
+}
+
+.res-textbox1 p {
+    margin: 2em 0;
+}
+
+.ensemble-img {
+    width: 90%;
+    margin: 2em auto;
+}
+
+.res-textbox2 ul li {
+    padding: .5em 0;
+    font-size: .8rem;
+}
+
+.res-textbox2 ul li a {
+    font-family: 'Inter', sans-serif;
+    color: #007882;
+    font-weight: bold;
+}
+
+.res-textbox2 ul li a:hover {
+    color: #2A4858;
+}
+
+.bg-blue {
+    position: absolute;
+    opacity: 0.1;
+    z-index: -1;
+    width: 25em;
+    right: -15%;
+    top: 35%;
+}
+
+.bg-green {
+    position: absolute;
+    opacity: 0.1;
+    z-index: -1;
+    width: 28em;
+    left: -20%;
+    bottom: -110%;;
+}
+
+/* CONTACT ME */
+
+.contact-grid {
+    padding: 2em 1em;;
+}
+
+.contact-textbox {
+    text-align: center;
+}
+
+.contact-textbox p {
+    line-height: 1.7em;
+}
+
+form, .form-flex {
+    display: grid;
+}
+
+form {
+    margin-top: 5em;
+    margin-bottom: 2em;
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+form label {
+    font-family: 'Montserrat', sans-serif;
+}
+
+form input, select, textarea {
+    margin-bottom: 1em;
+    padding: .5em;
+    background: #ECECEC;
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+
+select {
+    padding: .5em;
+}
+
+textarea {
+    height: 12vh;
+}
+
+form .cta-btn {
+    text-align: center;
+    margin: 1em auto;
+}
+
+.form-flex .name {
+    display: grid;
+}
+
+.contact-portrait {
+    height: 30em;
+    border-radius: 10em 0 0 0;
+    position: relative;
+    right: -20%;
+}
+
+.contact-grid .bg-green {
+    bottom: -50%;
+}
+
+form p.error {
+    font-size: .6rem;
+    color: red;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.red-border {
+    border: 1px solid red;
+}
+
+.show {
+    display: block;
+}
+
+/* MEDIA PAGE */
+
+.video {
+    display: grid;
+    place-content: center;
+}
+iframe {
+    width: 350px;
+    height: 220px;
+    padding: 1em;
+}
+
+.images .row {
+    display: grid;
+    place-content: center;
+    margin-left: auto;
+
+}
+
+.media-img {
+    margin: auto;
+    height: 20em;
+    padding: 1em;
+}
+
+
+
+@media (min-width: 500px) {
+
+   
+    img.bio-portrait2 {
+        margin: 2em auto;
+    }
+}
+
+@media (min-width: 720px) {
+    
+    /* RES PAGE */
+
+    .res-textbox1 p {
+        font-size: 16px;
+    }
+
+    .bg-blue {
+        width: 30em;
+    }
+
+    /* CONTACT PAGE */
+
+    .contact-textbox {
+        margin: 5em;
+        margin-top: 0em;
+    }
+    .contact-textbox h2 {
+        font-size: 2rem;
+    }
+
+    .contact-textbox p {
+        font-size: 1rem;
+        text-align: left;
+        margin: 3em 0;
+    }
+
+
+
+    .form-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-flex .name {
+        display: grid;
+        width: 45%;
+
+    }
+
+    /*Media Page*/
+
+    .video {
+        display: grid;
+        place-content: center;
+        grid-template-columns: auto auto;
+        grid-gap: 2em;
+        margin-top: 5em;
+    }
+
+    .images {
+        width: 90%;
+        margin: 5em auto;
+    }
+  
+    img.media-img {
+        height: 30em;
+        align-self: center;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .sub-title {
+        margin-left: 2em;
+    }
+    
+    .sub-title h1 {
+        font-size: 2.5rem;
+    }
+
+    .sub-page p {
+        font-size: 16px;
+    }
+
+    .sub-title h1:before {
+        width: 40%;
+    }
+
+    .contact-section {
+        width: 65%;
+    }
+
+    /* RES PAGE */
+
+    .res-grid {
+        grid-template-areas: 
+            'textbox1 textbox2'
+            'image image';
+        grid-template-columns: 50% 50%;
+        column-gap: 5em;
+        row-gap: 3em;
+        margin: 5em 10em;
+    }
+
+    .res-textbox1 h3 {
+        text-align: left;
+        font-size: 1.3rem;
+    }
+
+    .res-textbox1 {
+        grid-area: textbox1;
+        align-self: center;
+        padding: 2em;
+    }
+
+    .res-textbox2 {
+        grid-area: textbox2;
+        padding: 2em;
+        align-self: center;
+    }
+
+    img.ensemble-img {
+        grid-area: image;
+        max-width: 60%;
+    }
+
+    .res-textbox1 p {
+        line-height: 1.6em;
+    }
+
+    .res-textbox2 ul li {
+        font-size: 14px;
+    }
+
+    .bg-blue {
+        width: 30em;
+        top: 25%;
+        right: -5%;
+    }
+
+    .bg-green {
+        width: 35em;
+        bottom: -80%;
+        left: -5%;
+    }
+ 
+    .res-blue {
+        width: 40em;
+        top: 60%;
+        left: -5%;
+    }
+
+    .res-green {
+        bottom: -80%;
+        left: 60%;
+    }
+
+    /* CONTACT PAGE */
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        column-gap: 2em;
+        margin: 0 5em;
+    }
+
+    .contact-portrait {
+        height: 70%;
+        position: relative;
+        right: 0;
+    }
+
+    .contact-textbox {
+        text-align: left;
+    }
+
+    .contact-textbox p {
+        margin-top: 0;
+    }
+
+
+    form {
+        margin-left: 0;
+    }
+
+    form input {
+        height: 3vh;
+    }
+
+    form label {
+        margin-top: 2em;
+
+    }
+
+    /* Media page */
+
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    .images .row {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+    .images {
+    
+        width: 80%;
+    }
+
+   
+}
+
+@media (min-width: 1200px) {
+
+    /* BIO PAGE */
+
+    .bio-grid {
+        display: grid;
+        grid-template-areas: 
+            'text1 portrait1'
+            'portrait2 text2';
+        grid-template-columns: 45% 45%;
+        column-gap: 8em;
+        row-gap: 3em;
+        margin: 5em;
+    }
+
+    img.bio-portrait {
+        grid-area: portrait1;
+        height: 60em;
+        margin: 0;
+        align-self: center;
+    }
+
+    .text-box1 {
+        grid-area: text1;
+    }
+
+    img.bio-portrait2 {
+        grid-area: portrait2;
+        position: relative;
+        width: 50em;
+        left: -45%;
+    }
+
+    .text-box2 {
+        grid-area: text2;
+        align-self: center;
+    }
+}
+
+/* CONTACT PAGE */
+
+
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+
+dark blue: #2A4858
+dark green: #007882
+green: #23AA84
+light green: #86D780
+gray: #595959
+
+*/
