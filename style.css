@@ -38,6 +38,10 @@ ul {
     font-size: 1.3em;
 }
 
+.nav .nav-title {
+    font-size: .8rem;
+}
+
 .open-btn, .close-btn {
     cursor: pointer;
 }
@@ -118,7 +122,9 @@ a.contact-btn-active {
 
 a.contact-btn-active:hover {
     background-color: #2A4858;
+    color: white;
     transition: all 0.3s ease-out;
+    text-decoration: none;
 }
 
 
@@ -234,6 +240,27 @@ a.cta-btn:hover {
     z-index: -1;
 }
 
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+    transform: translateY(-100px);
+}
+
+.show-element {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.info-section ul:nth-child(2) {
+    transition-delay: 1s;
+}
+
+.info-section ul:nth-child(3) {
+    transition-delay: 1.5s;
+    
+}
+
 /* CONTACT SECTION */
 
 .contact-section {
@@ -274,6 +301,8 @@ hr {
 
 .social-icon {
     padding: 0 .5em;
+    width: 1.5em;
+  
 }
 
 .social-icon:hover {
@@ -459,8 +488,8 @@ hr {
     }
 
     .contact-section {
-        height: 15em;
-        width: 65%;
+        height: 18em;
+        width: 90%;
     }
 
 }

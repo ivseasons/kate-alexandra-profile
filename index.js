@@ -6,7 +6,9 @@ const firstName = document.getElementById('fname');
 const lastName = document.getElementById('lname');
 const email = document.getElementById('email');
 
-const errorMsg = document.getElementById('error-msg');
+const errorMsgEmail = document.getElementById('error-msg-email');
+const errorMsgFName = document.getElementById('error-msg-fname');
+const errorMsgLName = document.getElementById('error-msg-lname');
 const submitBtn = document.getElementById('submit');
 
 
@@ -24,18 +26,50 @@ close.addEventListener('click', () => {
 
 gsap.from('.headshot-circle', { duration: 1, x: 100, opacity: 0 } )
 
-gsap.from('.info-section ul', { duration: 1, y: 50, opacity: 0, delay: 2, stagger: .5 } )
+// animation on HOME page
 
-gsap.from('.bio-portrait', { duration: 1, x: 100, opacity: 0 } )
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show-element')
+        } else {
+            return;
+        }
+    })
+})
+
+const hiddenElements = document.querySelectorAll('.hidden')
+hiddenElements.forEach((el) => observer.observe(el))
+
+gsap.from('.bio-portrait', { duration: 1.5, x: 100, opacity: 0 } )
 
 submitBtn.addEventListener ('click', () =>  {
-    checkName()
+    checkFirstName()
+    checkLastName()
     validateEmail()
 })
 
-function checkName() {
-
+function checkFirstName() {
+    if(firstName.value == "") {
+        errorMsgFName.textContent = "Required";
+        firstName.classList.add('red-border')
+    } else {
+        firstName.value = ""
+        errorMsgFName.textContent = ""
+    }
 }
+
+function checkLastName() {
+    if(lastName.value == "") {
+        errorMsgLName.textContent = "Required";
+        lastName.classList.add('red-border')
+    } else {
+        lastName.value = ""
+        errorMsgLName.textContent = ""
+    }
+}
+
 
 function validateEmail() {
     const emailFormat = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)$/;
@@ -43,10 +77,12 @@ function validateEmail() {
         email.value = "";
         errorMsg.textContent = ""
     } else {
-        errorMsg.textContent = "Please provide a valid email address";
-        errorMsg.classList.add('show');
+        errorMsgEmail.textContent = "Please provide a valid email address";
         email.classList.add('red-border')
     }
 }
+
+
+
 
 

@@ -57,6 +57,20 @@ img.bio-portrait2 {
     margin: 0 auto;
 }
 
+[data-scroll] {
+    transition: all 2s;
+}
+
+[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0);
+} 
+
+[data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(-200px)
+} 
+
 
 /* RESOURCES PAGE */
 
@@ -151,7 +165,6 @@ form label {
 }
 
 form input, select, textarea {
-    margin-bottom: 1em;
     padding: .5em;
     background: #ECECEC;
     border: none;
@@ -191,16 +204,27 @@ form p.error {
     color: red;
     padding: 0;
     margin: 0;
-    display: none;
 }
 
 .red-border {
     border: 1px solid red;
 }
 
-.show {
-    display: block;
+form p.note {
+    font-weight: bold;
 }
+
+form p.note a {
+    font-family: 'Inter', sans-serif;
+    color: #007882;
+}
+
+form p.note a:hover {
+    text-decoration: underline;
+    color: #23AA84;
+}
+
+
 
 /* MEDIA PAGE */
 
@@ -218,16 +242,55 @@ iframe {
     display: grid;
     place-content: center;
     margin-left: auto;
-
 }
 
 .media-img {
-    margin: auto;
+    margin: 0 auto;
     height: 20em;
     padding: 1em;
+    cursor: pointer;
+    transition: all 1s;
 }
 
+.img-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: .8rem;
+}
 
+.img-container {
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+
+.img-caption {
+    position: absolute;
+    display: block;
+    left: 30%;
+    top: 40%;
+    width: 40%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.img-container:hover .img-caption {
+    opacity: 1;
+}
+
+.media-img:hover {
+    opacity: 0.2;
+}
+
+.img-caption a {
+    color: #007882
+}
+
+.img-caption a:hover {
+    color: #23AA84;
+    text-decoration: underline;
+}
 
 @media (min-width: 500px) {
 
@@ -297,6 +360,8 @@ iframe {
         height: 30em;
         align-self: center;
     }
+
+ 
 }
 
 @media (min-width: 1000px) {
@@ -318,7 +383,7 @@ iframe {
     }
 
     .contact-section {
-        width: 65%;
+        width: 100%
     }
 
     /* RES PAGE */
@@ -438,6 +503,15 @@ iframe {
 
     .images {
     
+        width: 80%;
+    }
+
+    .img-container p {
+        font-size: .8rem;
+    }
+
+    .img-caption {
+        left: 10%;
         width: 80%;
     }
 
