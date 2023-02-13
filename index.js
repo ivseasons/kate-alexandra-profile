@@ -24,7 +24,18 @@ close.addEventListener('click', () => {
     close.classList.remove('show')
 })
 
+// GSAP animation
+
 gsap.from('.headshot-circle', { duration: 1, x: 100, opacity: 0 } )
+
+let tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".headshot-circle",
+        start: 'bottom bottom',
+    }
+})
+
+tl.
 
 // animation on HOME page
 
