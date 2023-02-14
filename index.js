@@ -24,34 +24,6 @@ close.addEventListener('click', () => {
     close.classList.remove('show')
 })
 
-// GSAP animation
-
-gsap.from('.headshot-circle', { duration: 1, x: 100, opacity: 0 } )
-
-// let tl = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: ".headshot-circle",
-//         start: 'bottom bottom',
-//     }
-// })
-
-// animation on HOME page
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show-element')
-        } else {
-            return;
-        }
-    })
-})
-
-const hiddenElements = document.querySelectorAll('.hidden')
-hiddenElements.forEach((el) => observer.observe(el))
-
-gsap.from('.bio-portrait', { duration: 1.5, x: 100, opacity: 0 } )
 
 submitBtn.addEventListener ('click', () =>  {
     checkFirstName()

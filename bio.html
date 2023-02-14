@@ -116,17 +116,23 @@
                 </a>
             </div>
         </footer>
-
-        <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-        <script>
-            ScrollOut({
-                once: true,
-                threshold: .5
-            }) 
-        </script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+        <script>
+
+            gsap.from('.bio-portrait', { duration: 1.5, x: 100, opacity: 0 } )
+
+            gsap.from('.bio-portrait2', { 
+                scrollTrigger: '.bio-portrait2',
+                start: "center bottom",
+                x: -200,
+                ease: "circ.out",
+                opacity: 0,
+                duration: .5
+            })
+        </script>
         <script src="index.js"></script>
     </body>
 

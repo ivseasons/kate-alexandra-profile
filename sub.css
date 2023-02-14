@@ -275,11 +275,13 @@ iframe {
     transition: all 1s;
 }
 
-.img-container:hover .img-caption {
+.img-container:hover .img-caption,
+.img-container:focus .img-caption {
     opacity: 1;
 }
 
-.media-img:hover {
+.media-img:hover,
+.media-img:focus {
     opacity: 0.2;
 }
 
@@ -287,7 +289,8 @@ iframe {
     color: #007882
 }
 
-.img-caption a:hover {
+.img-caption a:hover,
+.img-caption a:focus {
     color: #23AA84;
     text-decoration: underline;
 }
