@@ -56,7 +56,7 @@ function validateEmail() {
     const emailFormat = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)$/;
     if (email.value.match(emailFormat)) {
         email.value = "";
-        errorMsg.textContent = ""
+        errorMsgEmail.textContent = ""
     } else {
         errorMsgEmail.textContent = "Please provide a valid email address";
         email.classList.add('red-border')
