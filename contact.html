@@ -53,7 +53,7 @@
                         <h2>LESSONS & COACHING</h2>
                         <p>A central tenant to my teaching philosophy is removing barriers for students to access quality music education. To arrange a lesson or coaching, please fill out the Studio Inquiry Form. Rates are reduced for the pandemic with a majority of lessons happening virtually.</p>
                    
-                        <form action="https://script.google.com/macros/s/AKfycbzL9PWhJAkEFfR_L6e2AzP4O77wu0Vf1vpWfzhWcSHu3_tYf8TfL7rwBMjW6ypY91Ab/exec" method="post">
+                        <form method="post" data-netlify="true" data-netlify-recaptcha="true">
                             <div class="form-flex">
                                 <div class="name">   
                                     <label for="fname">First Name*</label>
@@ -83,6 +83,8 @@
     
                             <label for="message">Message</label>
                             <textarea name="Message"></textarea>
+
+                            <div data-netlify-recaptcha="true"></div>
         
                             <button type="submit" class="cta-btn" id="submit">SUBMIT</button>
                             
