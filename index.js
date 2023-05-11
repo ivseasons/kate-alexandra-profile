@@ -25,43 +25,43 @@ close.addEventListener('click', () => {
 })
 
 
-submitBtn.addEventListener ('click', () =>  {
-    checkFirstName()
-    checkLastName()
-    validateEmail()
-})
+// submitBtn.addEventListener ('click', () =>  {
+//     checkFirstName()
+//     checkLastName()
+//     validateEmail()
+// })
 
-function checkFirstName() {
-    if(firstName.value == "") {
-        errorMsgFName.textContent = "Required";
-        firstName.classList.add('red-border')
-    } else {
-        firstName.value = ""
-        errorMsgFName.textContent = ""
-    }
-}
+// function checkFirstName() {
+//     if(firstName.value == "") {
+//         errorMsgFName.textContent = "Required";
+//         firstName.classList.add('red-border')
+//     } else {
+//         firstName.value = ""
+//         errorMsgFName.textContent = ""
+//     }
+// }
 
-function checkLastName() {
-    if(lastName.value == "") {
-        errorMsgLName.textContent = "Required";
-        lastName.classList.add('red-border')
-    } else {
-        lastName.value = ""
-        errorMsgLName.textContent = ""
-    }
-}
+// function checkLastName() {
+//     if(lastName.value == "") {
+//         errorMsgLName.textContent = "Required";
+//         lastName.classList.add('red-border')
+//     } else {
+//         lastName.value = ""
+//         errorMsgLName.textContent = ""
+//     }
+// }
 
 
-function validateEmail() {
-    const emailFormat = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)$/;
-    if (email.value.match(emailFormat)) {
-        email.value = "";
-        errorMsgEmail.textContent = ""
-    } else {
-        errorMsgEmail.textContent = "Please provide a valid email address";
-        email.classList.add('red-border')
-    }
-}
+// function validateEmail() {
+//     const emailFormat = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)$/;
+//     if (email.value.match(emailFormat)) {
+//         email.value = "";
+//         errorMsgEmail.textContent = ""
+//     } else {
+//         errorMsgEmail.textContent = "Please provide a valid email address";
+//         email.classList.add('red-border')
+//     }
+// }
 
 
 
