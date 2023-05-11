@@ -53,27 +53,27 @@
                         <h2>LESSONS & COACHING</h2>
                         <p>A central tenant to my teaching philosophy is removing barriers for students to access quality music education. To arrange a lesson or coaching, please fill out the Studio Inquiry Form. Rates are reduced for the pandemic with a majority of lessons happening virtually.</p>
                    
-                        <form>
+                        <form action="https://script.google.com/macros/s/AKfycbzL9PWhJAkEFfR_L6e2AzP4O77wu0Vf1vpWfzhWcSHu3_tYf8TfL7rwBMjW6ypY91Ab/exec" method="post">
                             <div class="form-flex">
                                 <div class="name">   
                                     <label for="fname">First Name*</label>
-                                    <input type="text" id="fname" name="fname" required>
+                                    <input type="text" id="fname" name="First Name" required>
                                     <p class="error" id="error-msg-fname"></p>
                                 </div>
                                 <div class="name">
                                     <label for="lname">Last Name*</label>
-                                    <input type="text" id="lname" name="lname" required>
+                                    <input type="text" id="lname" name="Last Name" required>
                                     <p class="error" id="error-msg-lname"></p>
                                 </div>
                                
                             </div>
                            
                             <label for="email">Email Address*</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="Email">
                             <p class="error" id="error-msg-email"></p>
     
                             <label for="interest" placeholder="Select">What are you interested in?</label>
-                            <select id="interest" required>
+                            <select id="interest" name="Interest" required>
                                 <option value="">Select</option>
                                 <option value="lesson">Lesson</option>
                                 <option value="coaching">Coaching</option>
@@ -82,10 +82,10 @@
                             </select>
     
                             <label for="message">Message</label>
-                            <textarea></textarea>
+                            <textarea name="Message"></textarea>
     
-                            <a href="#" class="cta-btn" id="submit">SUBMIT</a>
-
+        
+                            <button type="submit" class="cta-btn" id="submit">SUBMIT</button>
                             <p class="note">
                                 For studio inquiry, please fill out the form
                                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeU5NSH20rubXQwPxSp5EvytZG37MqXkmthVebQmN3eoDPITw/viewform" target="_blank">HERE</a>                            
@@ -126,6 +126,6 @@
         <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
         <script src="index.js"></script>
- 
+        <!--https://script.google.com/macros/s/AKfycbzL9PWhJAkEFfR_L6e2AzP4O77wu0Vf1vpWfzhWcSHu3_tYf8TfL7rwBMjW6ypY91Ab/exec-->
     </body>
 </html>

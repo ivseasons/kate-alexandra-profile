@@ -182,6 +182,18 @@ textarea {
 form .cta-btn {
     text-align: center;
     margin: 1em auto;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, #23AA84, #86D780);
+    color: white;
+    font-weight: bold;
+    padding: .5em 1em;
+    border-radius: 2em;
+    width: 120px;
+    border: 0;
+}
+
+form .cta-btn:hover {
+    background: #007882;
 }
 
 .form-flex .name {
