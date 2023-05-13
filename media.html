@@ -10,8 +10,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="sub.css">
+
+        <!--lightbox-->
+        <link href="node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
 
         <title>Kate Alexandra | Media</title>
     </head>
@@ -57,10 +61,49 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/NAJVdxK9BTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
 
-                <div class="images">
+                <div class="grid-gallery">
+                    
+                    <div class="grid-item">
+                        <a href="./images/landscape-headshot1.png" data-lightbox="grid-images" data-title="Headshot by Jackie Stevens">
+                            <img src="./images/landscape-headshot1.png" class="media-img" alt="Kate Alexandra Headshot 1">
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <a href="./images/sketch.png" data-lightbox="grid-images" data-title="ink sketch (2019) by Annie Scheumbauer">
+                            <img src="./images/sketch.png" class="media-img" alt="Sketch of Kate Alexandra">
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="./images/portrait1.png" data-lightbox="grid-images" data-title="Headshot by Jackie Stevens">
+                            <img src="./images/portrait1.png" class="media-img" alt="Kate Alexandra Headshot 3">
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="./images/portrait2.png" data-lightbox="grid-images" data-title="Headshot by Jackie Stevens">
+                            <img src="./images/portrait2.png" class="media-img" alt="Kate Alexandra Headshot 4">
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="./images/ensemble.png" data-lightbox="grid-images" data-title="Headshot by Jackie Stevens">
+                            <img src="./images/ensemble.png" class="media-img" alt="Kate Alexandra Headshot 2">
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="./images/landscape-headshot2.png" data-lightbox="grid-images" data-title="Headshot by Jackie Stevens">
+                            <img src="./images/landscape-headshot2.png" class="media-img" alt="Kate Alexandra Headshot 5">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- <div class="images">
                     <div class="row">
                         <div class="img-container">
-                            <img src="./images/sketch.png" class="media-img" alt="Sketch of Kate Alexandra">
+                            
                             <p class="img-caption">ink sketch (2019) by <a href="http://artistannie.com/" target="_blank" class="caption-link">Annie Scheumbauer</a></p>
                         </div>
                         <div class="img-container">
@@ -96,7 +139,7 @@
                         
                     </div>
 
-                </div>
+                </div> -->
 
                 <img src="./images/green-circle.png" class="bg-green media">
                 
@@ -130,7 +173,16 @@
 
         <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+        <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
         <script src="index.js"></script>
+
+        <script>
+            lightbox.option({
+              'resizeDuration': 200,
+              'wrapAround': true
+            })
+        </script>
  
     </body>
 </html>
